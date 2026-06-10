@@ -23,7 +23,7 @@ Retail analytics platform enabling:
 
 ## Architecture
 
-![1748691271296](https://github.com/user-attachments/assets/27210726-dda7-4d18-b29d-6e5d1f6cdce0)
+Architecture diagram assets can be added locally when publishing the project.
 
 
 ### Key Characteristics
@@ -89,7 +89,7 @@ Tables:
 * Stores only business keys and measures
 * Dimensions joined at query time
 
-<img width="1170" height="478" alt="image" src="https://github.com/user-attachments/assets/50f6c605-e67b-4280-9f02-ea833909c3be" />
+Data model diagram assets can be added locally when publishing the project.
 
 ---
 
