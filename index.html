@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retail Lakehouse Command Center</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            color: #16212a;
+            background: linear-gradient(135deg, #f4f8fb 0%, #e8f0f4 48%, #f5efe4 100%);
+        }
+        main {
+            width: min(1120px, calc(100% - 32px));
+            min-height: 100vh;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 0.95fr 1.05fr;
+            gap: 34px;
+            align-items: center;
+        }
+        .eyebrow {
+            color: #8a4f15;
+            font-size: 0.78rem;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+        h1 {
+            margin: 12px 0 16px;
+            font-size: clamp(2.1rem, 6vw, 4.4rem);
+            line-height: 1;
+        }
+        p {
+            max-width: 620px;
+            color: #485867;
+            font-size: 1.06rem;
+            line-height: 1.7;
+        }
+        .pipeline {
+            display: grid;
+            gap: 14px;
+        }
+        .stage {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            gap: 18px;
+            align-items: center;
+            padding: 18px;
+            border-radius: 8px;
+            border: 1px solid rgba(22, 33, 42, 0.1);
+            background: rgba(255, 255, 255, 0.82);
+            box-shadow: 0 14px 32px rgba(46, 70, 84, 0.09);
+        }
+        .stage strong {
+            color: #8a4f15;
+            font-size: 1.1rem;
+        }
+        .stage span {
+            color: #526371;
+            line-height: 1.55;
+        }
+        .badge {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 38px;
+            border-radius: 8px;
+            background: #f5e7d3;
+            font-weight: 800;
+        }
+        @media (max-width: 840px) {
+            main {
+                grid-template-columns: 1fr;
+                align-content: center;
+                padding: 48px 0;
+            }
+            .stage {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <div class="eyebrow">Azure Databricks retail pipeline</div>
+            <h1>Retail Lakehouse Command Center</h1>
+            <p>
+                A Databricks medallion architecture project for ingesting, refining, and publishing
+                analytics-ready retail data across Bronze, Silver, and Gold layers.
+            </p>
+        </section>
+        <section class="pipeline" aria-label="Lakehouse stages">
+            <div class="stage">
+                <div class="badge">Bronze</div>
+                <span><strong>Raw ingestion</strong><br>Auto Loader brings source retail data into Delta Lake.</span>
+            </div>
+            <div class="stage">
+                <div class="badge">Silver</div>
+                <span><strong>Refinement</strong><br>Customer, order, and product entities are cleaned and deduplicated.</span>
+            </div>
+            <div class="stage">
+                <div class="badge">Gold</div>
+                <span><strong>Business marts</strong><br>Fact and dimension tables support trend and revenue analysis.</span>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
